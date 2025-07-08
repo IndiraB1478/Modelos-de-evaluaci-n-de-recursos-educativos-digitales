@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelos de Evaluación de RED</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf7f7;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #e3b6b6;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .menu {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #f1c8c8;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+      border-radius: 10px;
+    }
+    .dropdown button {
+      color: #4b2d2d;
+      padding: 10px;
+      text-align: left;
+      border: none;
+      background-color: transparent;
+      width: 100%;
+      cursor: pointer;
+    }
+    .dropdown button:hover {
+      background-color: #d48e8e;
+    }
+    .menu:hover .dropdown {
+      display: block;
+    }
+    header button {
+      background-color: #f1c8c8;
+      border: none;
+      color: #4b2d2d;
+      padding: 10px 15px;
+      border-radius: 20px;
+      margin: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    header button:hover {
+      background-color: #d48e8e;
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+    .contenido {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button onclick="mostrarSeccion('inicio')">INICIO</button>
+    <div class="menu">
+      <button>MODELOS DE EVALUACIÓN Y RED</button>
+      <div class="dropdown">
+        <button onclick="mostrarSeccion('seleccionando')">Seleccionando modelos</button>
+        <button onclick="mostrarSeccion('recursos')">Recursos educativos digitales</button>
+      </div>
+    </div>
+    <button onclick="mostrarSeccion('redisenio')">REDISEÑO</button>
+    <button onclick="mostrarSeccion('aplicacion')">APLICACIÓN DE MODELOS</button>
+    <button onclick="mostrarSeccion('referencias')">REFERENCIAS</button>
+  </header>
+
+  <main>
+    <div id="inicio" class="contenido">
+      <h2>Entregable 1. Sitio web: modelos de evaluación de Recursos Educativos Digitales (RED)</h2>
+      <p>Indira Milena Babativa Umaña</p>
+      <p>Docente: Camilo Andrés Brito Daza</p>
+      <p>Universidad de Santander</p>
+      <img src="/mnt/data/4db43633-0fb8-49ff-8d4b-7d8a56410f79.png" alt="Ilustración educativa RED">
+    </div>
+
+    <div id="modelos" class="contenido" style="display: none;">
+      <h2>Modelos de Evaluación y RED</h2>
+      <p>Descripción general de los modelos de evaluación y recursos educativos digitales.</p>
+    </div>
+
+    <div id="seleccionando" class="contenido" style="display: none;">
+      <h2>Seleccionando modelos</h2>
+      <p>Contenido sobre cómo seleccionar modelos adecuados de evaluación para RED.</p>
+      <img src="https://cdn.pixabay.com/photo/2020/04/17/14/27/e-learning-5055180_1280.jpg" alt="Seleccionando modelos - imagen representativa">
+    </div>
+
+    <div id="recursos" class="contenido" style="display: none;">
+      <h2>Recursos Educativos Digitales</h2>
+      <p>Información sobre los diferentes tipos de RED y sus aplicaciones en el aula.</p>
+      <img src="https://cdn.pixabay.com/photo/2017/03/15/12/43/education-2149320_1280.jpg" alt="Recursos Educativos Digitales - imagen representativa">
+    </div>
+
+    <div id="redisenio" class="contenido" style="display: none;">
+      <h2>Rediseño</h2>
+      <p>Propuesta de rediseño de actividades o recursos educativos con base en los modelos seleccionados.</p>
+    </div>
+
+    <div id="aplicacion" class="contenido" style="display: none;">
+      <h2>Aplicación de Modelos de Evaluación</h2>
+      <p>Ejemplos prácticos y resultados de aplicar modelos de evaluación en contextos reales.</p>
+    </div>
+
+    <div id="referencias" class="contenido" style="display: none;">
+      <h2>Referencias</h2>
+      <p>Listado de fuentes bibliográficas y recursos utilizados en el desarrollo del sitio.</p>
+    </div>
+  </main>
+
+  <script>
+    function mostrarSeccion(seccionId) {
+      const secciones = document.querySelectorAll('.contenido');
+      secciones.forEach(seccion => {
+        seccion.style.display = 'none';
+      });
+      document.getElementById(seccionId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
